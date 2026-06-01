@@ -1,0 +1,55 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
+body{background:linear-gradient(135deg,#667eea 0%,#5a3a8e 100%);min-height:100vh;color:#1a202c}
+header{background:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,.1);flex-wrap:wrap;gap:1rem}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand span{font-size:2rem}
+.brand h1{font-size:1.3rem;color:#5a3a8e}
+.badge{background:#5a3a8e;color:#fff;padding:.5rem 1rem;border-radius:20px;font-size:.85rem}
+main{max-width:1100px;margin:0 auto;padding:1.5rem}
+.hero{background:#fff;padding:2rem;border-radius:14px;margin-bottom:1.5rem;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.hero h2{color:#5a3a8e;margin-bottom:.6rem}
+.hero p{color:#4a5568;line-height:1.6}
+.dashboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:1.5rem}
+.kpi{background:linear-gradient(135deg,#667eea,#5a3a8e);color:#fff;padding:1.5rem;border-radius:12px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.15)}
+.kpi b{font-size:2.2rem;display:block}
+.kpi span{opacity:.9;font-size:.9rem}
+.card{background:#fff;padding:2rem;border-radius:14px;margin-bottom:1.5rem;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.card h2{color:#5a3a8e;margin-bottom:1rem;border-bottom:2px solid #667eea;padding-bottom:.5rem}
+.card h3{color:#2d3748;margin:1rem 0 .6rem}
+.form label{display:block;margin:.8rem 0 .3rem;font-weight:600;color:#4a5568}
+.form textarea{width:100%;padding:.8rem;border:1px solid #cbd5e0;border-radius:8px;font-family:inherit;font-size:.95rem;resize:vertical}
+.form textarea:focus{outline:none;border-color:#667eea}
+.btn{padding:.8rem 1.5rem;border:none;border-radius:8px;cursor:pointer;font-weight:600;margin-top:1rem;margin-right:.5rem;transition:.2s}
+.btn.primary{background:#5a3a8e;color:#fff}
+.btn.primary:hover{background:#4a2e75}
+.btn.ghost{background:#edf2f7;color:#2d3748;border:1px solid #cbd5e0}
+.overall{display:flex;align-items:center;gap:2rem;margin:1.5rem 0;padding:1.5rem;background:#f7fafc;border-radius:12px;flex-wrap:wrap}
+.score-circle{width:140px;height:140px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:conic-gradient(#5a3a8e calc(var(--p)*1%),#e2e8f0 0);position:relative}
+.score-circle::before{content:'';position:absolute;inset:10px;background:#fff;border-radius:50%}
+.score-circle b{position:relative;font-size:2.5rem;color:#5a3a8e}
+.score-circle small{position:relative;color:#718096}
+.verdict h3{color:#5a3a8e;font-size:1.4rem}
+.verdict p{color:#4a5568;margin-top:.4rem}
+.rubric{margin:1.2rem 0}
+.bar-row{display:grid;grid-template-columns:160px 1fr 50px;gap:1rem;align-items:center;margin-bottom:.6rem}
+.bar-row span{font-size:.9rem;color:#4a5568}
+.bar{background:#edf2f7;height:18px;border-radius:9px;overflow:hidden}
+.fill{height:100%;border-radius:9px;transition:width .6s}
+.fill.high{background:#48bb78}
+.fill.med{background:#f6ad55}
+.fill.low{background:#fc8181}
+.bar-row b{text-align:right;color:#2d3748}
+.agents{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.agent-result{background:#f7fafc;padding:1rem;border-radius:10px;border-left:4px solid #5a3a8e}
+.ar-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
+.ar-score{background:#5a3a8e;color:#fff;padding:.2rem .6rem;border-radius:12px;font-weight:700}
+.agent-result p{font-size:.88rem;color:#4a5568;line-height:1.5}
+.agents-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:1rem}
+.agent-card{background:#f7fafc;padding:1.2rem;border-radius:10px;border-top:4px solid #667eea}
+.agent-card h3{color:#5a3a8e;margin-bottom:.5rem}
+.agent-card p{font-size:.9rem;color:#4a5568;line-height:1.5}
+.rubric-table{width:100%;border-collapse:collapse;margin-top:1rem}
+.rubric-table th{background:#5a3a8e;color:#fff;padding:.7rem;text-align:left}
+.rubric-table td{padding:.7rem;border-bottom:1px solid #e2e8f0}
+.muted{color:#718096;font-size:.9rem}
+footer{background:#2d3748;color:#fff;text-align:center;padding:1rem;font-size:.9rem}

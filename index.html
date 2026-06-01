@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>CrewAI Evaluation Framework — Automated LLM Quality Assessment</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header>
+  <div class="brand"><span>🤖</span><h1>CrewAI Evaluation Framework</h1></div>
+  <div class="badge">Azure OpenAI · CrewAI · LangChain</div>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Automated LLM Response Quality Evaluator</h2>
+    <p>Custom CrewAI agents replace manual human evaluation with a scalable automated system — achieving <b>79% accuracy</b> in model assessment.</p>
+  </section>
+
+  <div class="dashboard">
+    <div class="kpi"><b>79%</b><span>Eval Accuracy</span></div>
+    <div class="kpi"><b>4</b><span>Specialist Agents</span></div>
+    <div class="kpi"><b>6</b><span>Rubric Dimensions</span></div>
+    <div class="kpi"><b>10×</b><span>Faster vs Manual</span></div>
+  </div>
+
+  <section class="card">
+    <h2>🧪 Try the Evaluator</h2>
+    <div class="form">
+      <label>Input Prompt</label>
+      <textarea id="prompt" rows="2" placeholder="What is the capital of France?">Explain how a transformer neural network works in 3 sentences.</textarea>
+
+      <label>LLM Response (to evaluate)</label>
+      <textarea id="response" rows="4">A transformer is a deep learning model that uses self-attention to weigh the importance of different words in a sequence. It processes all tokens in parallel using encoder and decoder stacks, each with multi-head attention and feed-forward layers. Transformers power modern LLMs like GPT and BERT, replacing older RNN-based architectures for most NLP tasks.</textarea>
+
+      <label>Reference / Ground Truth (optional)</label>
+      <textarea id="reference" rows="2">A transformer is a neural network architecture based on self-attention, introduced in "Attention is All You Need" (2017). It processes sequences in parallel rather than sequentially and is the backbone of modern LLMs.</textarea>
+
+      <button class="btn primary" onclick="evaluate()">🚀 Run CrewAI Evaluation</button>
+      <button class="btn ghost" onclick="loadExample()">📋 Load Different Example</button>
+    </div>
+  </section>
+
+  <section class="card" id="resultCard" style="display:none">
+    <h2>📊 Evaluation Results</h2>
+    <div class="overall" id="overall"></div>
+    <div class="rubric" id="rubric"></div>
+    <h3>🤖 Agent Verdicts</h3>
+    <div class="agents" id="agents"></div>
+  </section>
+
+  <section class="card">
+    <h2>🏗️ CrewAI Agent Architecture</h2>
+    <div class="agents-grid">
+      <div class="agent-card"><h3>📐 Relevance Agent</h3><p>Checks if the response actually addresses the prompt's intent. Uses semantic similarity against the input question.</p></div>
+      <div class="agent-card"><h3>✅ Factual Accuracy Agent</h3><p>Verifies factual claims against reference text and a knowledge base. Detects hallucinations.</p></div>
+      <div class="agent-card"><h3>🎯 Completeness Agent</h3><p>Assesses whether the response covers all aspects of the prompt — no missing key information.</p></div>
+      <div class="agent-card"><h3>✍️ Clarity & Coherence Agent</h3><p>Evaluates grammar, structure, logical flow, and readability of the response.</p></div>
+    </div>
+    <p class="muted" style="margin-top:1rem">Agents collaborate through CrewAI's task orchestration. Each returns a 0–100 score on its rubric dimension, then a meta-agent aggregates verdicts into the final assessment.</p>
+  </section>
+
+  <section class="card">
+    <h2>📋 Rubric Dimensions</h2>
+    <table class="rubric-table">
+      <thead><tr><th>Dimension</th><th>Weight</th><th>Scoring Criteria</th></tr></thead>
+      <tbody>
+        <tr><td>Relevance</td><td>20%</td><td>Does the response address the prompt?</td></tr>
+        <tr><td>Factual Accuracy</td><td>25%</td><td>Are the claims correct and supported?</td></tr>
+        <tr><td>Completeness</td><td>20%</td><td>Are all aspects covered?</td></tr>
+        <tr><td>Clarity</td><td>15%</td><td>Is the response clear and well-structured?</td></tr>
+        <tr><td>Coherence</td><td>10%</td><td>Logical flow and consistency?</td></tr>
+        <tr><td>Conciseness</td><td>10%</td><td>Free from unnecessary verbosity?</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer>© 2026 CrewAI Evaluation Framework · 79% accuracy in automated model assessment</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
